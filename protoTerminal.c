@@ -25,6 +25,8 @@ Data: 01/02/2022
 Trabalho 1 - Proto-terminal
 Equipe: Brenda Aguiar, Elizamara Almeida, Jessica Brito
 
+*/
+
 /*
 
 Funciona:
@@ -107,7 +109,9 @@ void commands(char ** args){
 	    exit(1);
 	} 
     else if (rc == 0) {
-	    execvp(args[0], args);		
+	    execvp(args[0], args);
+        printf("%s %s\n", args[0], args[1]);
+        		
 	    printf("Comando não encontrado\n");
 	} 
     else{
